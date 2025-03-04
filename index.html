@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Cá Nhân</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 40px 0;
+            display: flex;
+            justify-content: center;
+        }
+        .cv-container {
+            display: flex;
+            width: 80vw;
+            max-width: 1200px;
+            background: #fff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .sidebar {
+            background: linear-gradient(135deg, #2c3e50, #34495e);
+            color: white;
+            padding: 40px;
+            width: 35%;
+            text-align: center;
+        }
+        .avatar {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 5px solid #ffffff;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+        .sidebar h2, .sidebar p {
+            margin: 15px 0;
+        }
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+            text-align: left;
+        }
+        .sidebar ul li {
+            margin: 12px 0;
+            display: flex;
+            align-items: center;
+        }
+        .sidebar ul li i {
+            margin-right: 10px;
+        }
+        .content {
+            padding: 40px;
+            width: 65%;
+            background: #ffffff;
+            color: #333;
+        }
+        h3 {
+            color: #2c3e50;
+            border-left: 5px solid #2c3e50;
+            padding-left: 10px;
+            margin-bottom: 15px;
+            font-size: 22px;
+        }
+        .skill-bar {
+            background: #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+            margin: 10px 0;
+        }
+        .skill-level {
+            background: #27ae60;
+            color: white;
+            text-align: right;
+            padding: 5px;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        .btn-download {
+            background: #27ae60;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 20px;
+        }
+    </style>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="cv-container">
+        <aside class="sidebar">
+            <img src="photo_2024-12-02 22.55.56.jpeg" alt="Avatar" class="avatar">
+            <h2>Nguyễn Minh Khiêm</h2>
+            <p>Senior Front-end Developer</p>
+            <ul>
+                <li><i class="fas fa-envelope"></i> nguyenminhkhiemlew@gmail.com</li>
+                <li><i class="fas fa-phone"></i> 0823537997</li>
+                <li><i class="fas fa-globe"></i> example.com</li>
+                <li><i class="fas fa-map-marker-alt"></i> Hà Nội, Việt Nam</li>
+            </ul>
+        </aside>
+        <main class="content">
+            <section>
+                <h3>Giới thiệu</h3>
+                <p>Tôi là một lập trình viên Front-end với hơn 5 năm kinh nghiệm, chuyên thiết kế giao diện web tối ưu và hiệu suất cao.</p>
+            </section>
+            <section>
+                <h3>Kinh nghiệm làm việc</h3>
+                <p><strong>Công ty ABC</strong> - Senior Front-end Developer (2020 - Nay)</p>
+                <p>Phát triển giao diện web, tối ưu hiệu suất, làm việc với React/Vue...</p>
+            </section>
+            <section>
+                <h3>Kỹ năng</h3>
+                <p>HTML, CSS, JavaScript</p>
+                <div class="skill-bar"><div class="skill-level" style="width: 95%">95%</div></div>
+                <p>React, Vue</p>
+                <div class="skill-bar"><div class="skill-level" style="width: 90%">90%</div></div>
+            </section>
+            <section>
+                <h3>Dự án</h3>
+                <ul>
+                    <li>Ứng dụng thương mại điện tử (React, Redux, Firebase).</li>
+                    <li>Hệ thống quản lý khách hàng (Vue.js, Node.js, MongoDB).</li>
+                </ul>
+            </section>
+            <section>
+                <h3>Chứng chỉ</h3>
+                <ul>
+                    <li>Google UX Design Certificate</li>
+                    <li>React Developer Certification</li>
+                </ul>
+            </section>
+            <section>
+                <h3>Ngôn ngữ</h3>
+                <ul>
+                    <li>Tiếng Việt (Bản ngữ)</li>
+                    <li>Tiếng Anh (C1)</li>
+                </ul>
+            </section>
+            <section>
+                <h3>Sở thích</h3>
+                <ul>
+                    <li>Đọc sách về công nghệ</li>
+                    <li>Chạy bộ & thể thao</li>
+                    <li>Du lịch khám phá</li>
+                </ul>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
