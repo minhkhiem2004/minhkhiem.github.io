@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liên Hệ</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #1e3a5f, #2c3e50);
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: white;
+        }
+        .contact-container {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            width: 400px;
+            text-align: center;
+        }
+        h2 {
+            color: #1e3a5f;
+            margin-bottom: 15px;
+        }
+        .input-group {
+            margin-bottom: 15px;
+            text-align: left;
+            position: relative;
+        }
+        .input-group label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+        }
+        .input-group input, .input-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+        .input-group input:focus, .input-group textarea:focus {
+            border-color: #1e3a5f;
+            box-shadow: 0 0 8px rgba(30, 58, 95, 0.5);
+        }
+        .input-group i {
+            position: absolute;
+            top: 40px;
+            left: 10px;
+            color: #1e3a5f;
+        }
+        .input-group input, .input-group textarea {
+            padding-left: 35px;
+        }
+        .char-counter {
+            font-size: 12px;
+            text-align: right;
+            color: #555;
+            margin-top: 5px;
+        }
+        .error {
+            color: red;
+            font-size: 14px;
+            margin-top: 5px;
+            display: none;
+            font-weight: bold;
+        }
+        .btn-send {
+            background: #1e3a5f;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+            transition: background 0.3s;
+        }
+        .btn-send:hover {
+            background: #163251;
+        }
+        .success-message {
+            display: none;
+            color: green;
+            font-size: 16px;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="contact-container">
+        <h2><i class="fas fa-envelope"></i> Liên Hệ</h2>
+        <form id="contactForm">
+            <div class="input-group">
+                <label for="name"><i class="fas fa-user"></i> Họ và tên</label>
+                <input type="text" id="name" placeholder="Nhập họ và tên">
+                <span class="error" id="errorName">Vui lòng nhập họ và tên.</span>
+            </div>
+            <div class="input-group">
+                <label for="email"><i class="fas fa-envelope"></i> Email</label>
+                <input type="email" id="email" placeholder="Nhập email">
+                <span class="error" id="errorEmail">Vui lòng nhập email hợp lệ.</span>
+            </div>
+            <div class="input-group">
+                <label for="message"><i class="fas fa-comment"></i> Nội dung</label>
+                <textarea id="message" placeholder="Nhập nội dung liên hệ" maxlength="300"></textarea>
+                <div class="char-counter" id="charCounter">300 ký tự còn lại</div>
+                <span class="error" id="errorMessage">Vui lòng nhập nội dung.</span>
+            </div>
+            <button type="submit" class="btn-send"><i class="fas fa-paper-plane"></i> Gửi</button>
+            <p class="success-message" id="successMessage"><i class="fas fa-check-circle"></i> Gửi thành công!</p>
+        </form>
+    </div>
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            let isValid = true;
+            
+            let name = document.getElementById("name").value.trim();
+            let email = document.getElementById("email").value.trim();
+            let message = document.getElementById("message").value.trim();
+            
+            document.getElementById("errorName").style.display = name ? "none" : "block";
+            document.getElementById("errorEmail").style.display = email.includes("@") ? "none" : "block";
+            document.getElementById("errorMessage").style.display = message ? "none" : "block";
+            
+            isValid = name && email.includes("@") && message;
+            
+            if (isValid) {
+                document.getElementById("successMessage").style.display = "block";
+                setTimeout(() => {
+                    document.getElementById("successMessage").style.display = "none";
+                    document.getElementById("contactForm").reset();
+                    document.getElementById("charCounter").textContent = "300 ký tự còn lại";
+                }, 2500);
+            }
+        });
+
+        document.getElementById("message").addEventListener("input", function() {
+            let maxLength = 300;
+            let currentLength = this.value.length;
+            document.getElementById("charCounter").textContent = (maxLength - currentLength) + " ký tự còn lại";
+        });
+    </script>
+</body>
+</html>
+
+
