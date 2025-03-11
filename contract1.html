@@ -8,68 +8,91 @@
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <style>
         body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #1e3a5f;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-        .contact-container {
-            background: #fff;
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            width: 400px;
-            text-align: center;
-        }
-        h2 {
-            color: #1e3a5f;
-            margin-bottom: 20px;
-        }
-        .input-group {
-            margin-bottom: 15px;
-            text-align: left;
-        }
-        .input-group label {
-            font-weight: bold;
-            display: block;
-            margin-bottom: 5px;
-            color: #333;
-        }
-        .input-group input, .input-group textarea {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 16px;
-        }
-        .error {
-            color: red;
-            font-size: 14px;
-            margin-top: 5px;
-            display: none;
-        }
-        .btn-send {
-            background: #1e3a5f;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-            width: 100%;
-        }
-        .btn-send:hover {
-            background: #163251;
-        }
-        .success-message {
-            display: none;
-            color: green;
-            font-size: 16px;
-            margin-top: 10px;
-        }
+    font-family: 'Poppins', sans-serif;
+    background-color: #1e3a5f;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+.contact-container {
+    background: #fff;
+    padding: 50px;
+    border-radius: 12px;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
+    width: 450px;
+    max-width: 90vw;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h2 {
+    color: #1e3a5f;
+    margin-bottom: 25px;
+    font-size: 24px;
+}
+
+.input-group {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 18px;
+}
+
+.input-group label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 6px;
+    color: #333;
+    font-size: 16px;
+}
+
+.input-group input, .input-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 17px;
+    box-sizing: border-box;
+}
+
+textarea {
+    min-height: 100px;
+}
+
+.error {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+    display: none;
+}
+
+.btn-send {
+    background: #1e3a5f;
+    color: white;
+    padding: 14px 0;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 17px;
+    width: 100%;
+    margin-top: 12px;
+}
+
+.btn-send:hover {
+    background: #163251;
+}
+
+.success-message {
+    display: none;
+    color: green;
+    font-size: 16px;
+    margin-top: 12px;
+}
     </style>
 </head>
 <body>
@@ -121,5 +144,4 @@
     </script>
 </body>
 </html>
-
 
